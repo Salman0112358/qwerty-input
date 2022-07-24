@@ -1,5 +1,7 @@
 import { useState } from "react"
 import WordDescription from './WordDescription';
+import isInputStrong from "./isInputStrong";
+import IsStrongCheck from "./isInputStrong";
 
 function QwertyInput(): JSX.Element {
   const [text, setText] = useState('')
@@ -34,10 +36,14 @@ function QwertyInput(): JSX.Element {
       <button onClick={() => addLetter('I')}>I</button>
       <button onClick={() => addLetter('O')}>O</button>
       <button onClick={() => addLetter('P')}>P</button>
+      <button onClick={()=> addLetter('!')}>!</button>
+      <button onClick={()=> addLetter('?')}>?</button>
+      <button onClick={()=> addLetter('£')}>£</button>
       <br />
       <button onClick={handleBackspace}>Backspace</button>
       <button onClick={() => setText('')}>Clear all</button>
       <WordDescription wordToDescribe={text} />
+      <IsStrongCheck wordToDescribe={text} />
     </>
   )
 }
