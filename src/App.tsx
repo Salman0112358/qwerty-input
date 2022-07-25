@@ -1,5 +1,5 @@
-import KeyboardControlledInput from './components/KeyboardControlled';
-import QwertyInput from './components/QwertyInput';
+import KeyboardControlledInput from "./components/KeyboardControlled";
+import QwertyInput from "./components/QwertyInput";
 import UncontrolledInput from "./components/UncontrolledInput";
 
 function App(): JSX.Element {
@@ -12,7 +12,7 @@ function App(): JSX.Element {
       <UncontrolledInput />
       <hr />
       <h2>Controlled Keyboard input</h2>
-      <KeyboardControlledInput/>
+      <KeyboardControlledInput />
       <hr />
     </>
   );

@@ -1,17 +1,19 @@
-import { hasAVowel } from "../utils/hasAVowel"
+import { hasAVowel } from "../utils/hasAVowel";
 
 interface WordDescriptionProps {
   wordToDescribe: string;
 }
 
-function WordDescription({ wordToDescribe }: WordDescriptionProps): JSX.Element {
+function WordDescription({
+  wordToDescribe,
+}: WordDescriptionProps): JSX.Element {
   const hasAtLeastFiveCharacters = wordToDescribe.length > 5;
   const containsAVowel = hasAVowel(wordToDescribe);
-  const hasTheLetterQ = wordToDescribe.toLowerCase().match('q');
+  const hasTheLetterQ = wordToDescribe.toLowerCase().match("q");
   const SpecialCharacters = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-  const hasSpecial = SpecialCharacters.test(wordToDescribe)
-  const hasLowerCase = wordToDescribe.match((/[a-z]/))
-  const hasUpperCase = wordToDescribe.match((/[A-Z]/))
+  const hasSpecial = SpecialCharacters.test(wordToDescribe);
+  const hasLowerCase = wordToDescribe.match(/[a-z]/);
+  const hasUpperCase = wordToDescribe.match(/[A-Z]/);
 
   return (
     <ul>
@@ -22,7 +24,7 @@ function WordDescription({ wordToDescribe }: WordDescriptionProps): JSX.Element 
       {hasLowerCase && <li>Contains a lower case Character</li>}
       {hasUpperCase && <li>Contains a upper case Character</li>}
     </ul>
-  )
+  );
 }
 
-export default WordDescription
+export default WordDescription;

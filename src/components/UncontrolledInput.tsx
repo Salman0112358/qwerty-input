@@ -3,9 +3,8 @@ function UncontrolledInput(): JSX.Element {
     <>
       <p>Here's an input:</p>
       <input />
-  
     </>
-  )
+  );
 }
 
-export default UncontrolledInput
+export default UncontrolledInput;
