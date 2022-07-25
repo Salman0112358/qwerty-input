@@ -39,6 +39,9 @@ function QwertyInput(): JSX.Element {
       <button onClick={()=> addLetter('!')}>!</button>
       <button onClick={()=> addLetter('?')}>?</button>
       <button onClick={()=> addLetter('£')}>£</button>
+      <button onClick={()=> addLetter('a')}>a</button>
+      <button onClick={()=> addLetter('b')}>b</button>
+      <button onClick={()=> addLetter('c')}>c</button>
       <br />
       <button onClick={handleBackspace}>Backspace</button>
       <button onClick={() => setText('')}>Clear all</button>

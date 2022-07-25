@@ -10,6 +10,8 @@ function WordDescription({ wordToDescribe }: WordDescriptionProps): JSX.Element 
   const hasTheLetterQ = wordToDescribe.toLowerCase().match('q');
   const SpecialCharacters = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
   const hasSpecial = SpecialCharacters.test(wordToDescribe)
+  const hasLowerCase = wordToDescribe.match((/[a-z]/))
+  const hasUpperCase = wordToDescribe.match((/[A-Z]/))
 
   return (
     <ul>
@@ -17,6 +19,8 @@ function WordDescription({ wordToDescribe }: WordDescriptionProps): JSX.Element 
       {containsAVowel && <li>Contains a vowel</li>}
       {hasTheLetterQ && <li>Contains the letter Q</li>}
       {hasSpecial && <li>Contains Special Character/s!</li>}
+      {hasLowerCase && <li>Contains a lower case Character</li>}
+      {hasUpperCase && <li>Contains a upper case Character</li>}
     </ul>
   )
 }
